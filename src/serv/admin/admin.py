@@ -4,8 +4,8 @@
 
 from flask import Blueprint, render_template
 
+from . import admin
 
-admin = Blueprint('admin', __name__, url_prefix='/admin')
 
 @admin.route('/test/<value>')
 def test(value):

@@ -4,8 +4,8 @@
 
 from flask import Blueprint, render_template
 
+from . import schd
 
-schd = Blueprint('schd', __name__, url_prefix='/schd')
 
 @schd.route('/test/<value>')
 def test(value):

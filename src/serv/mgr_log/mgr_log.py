@@ -4,8 +4,8 @@
 
 from flask import Blueprint, render_template
 
+from . import mgr_log
 
-mgr_log = Blueprint('mgr_log', __name__, url_prefix='/mgrlog')
 
 @mgr_log.route('/test/<value>')
 def test(value):
