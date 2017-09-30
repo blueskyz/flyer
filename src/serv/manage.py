@@ -15,7 +15,7 @@ from mgr_log.mgr_log import mgr_log
 
 app = Flask(__name__)
 
-admin = fAdmin(app, name='microblog', template_mode='bootstrap3')
+admin = fAdmin(app, name='ddqq', template_mode='bootstrap3')
 
 
 # 注册 blueprint
