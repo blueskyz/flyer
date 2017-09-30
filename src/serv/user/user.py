@@ -4,9 +4,9 @@
 
 from flask import Blueprint, render_template
 
-from . import admin
+from . import user
 
 
-@admin.route('/test/<value>')
+@user.route('/test/<value>')
 def test(value):
     return 'name: {}, value: {}'.format(__name__, value)
