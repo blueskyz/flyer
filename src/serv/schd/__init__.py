@@ -5,5 +5,7 @@
 from flask import Blueprint, render_template
 
 
-schd = Blueprint('schd', __name__, url_prefix='/schd')
-
+schd = Blueprint('schd',
+                 __name__,
+                 template_folder='templates',
+                 url_prefix='/schd')

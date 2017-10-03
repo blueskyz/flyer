@@ -3,7 +3,9 @@
 
 
 from flask import Flask
-from flask_admin import Admin as fAdmin
+from flask_admin import Admin
+from flask_admin import BaseView
+from flask_bootstrap import Bootstrap
 
 
 from home.home import home
@@ -14,8 +16,10 @@ from mgr_log.mgr_log import mgr_log
 
 
 app = Flask(__name__)
+Bootstrap(app)
 
-admin = fAdmin(app, name='ddqq', template_mode='bootstrap3')
+# 添加管理界面
+admin = Admin(app, name='管理', template_mode='bootstrap3')
 
 
 # 注册 blueprint
@@ -25,6 +29,11 @@ app.register_blueprint(schd)
 app.register_blueprint(user)
 app.register_blueprint(mgr_log)
 
+# print(list(app.url_map.iter_rules()))
+# print(app.template_folder)
+print(app.blueprints['admin'].template_folder)
+# app.blueprints['admin'].template_folder = 'admin/templates'
+print(app.blueprints['admin'].template_folder)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8880, debug=True)

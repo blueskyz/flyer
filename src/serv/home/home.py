@@ -9,4 +9,4 @@ from . import home
 
 @home.route('/test/<value>')
 def test(value):
-    return 'name: {}, value: {}'.format(__name__, value)
+    return render_template('home.html')
