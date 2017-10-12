@@ -3,7 +3,9 @@
 
 
 from flask import Flask
+import werkzeug
 from flask import redirect
+from flask import render_template
 from flask_admin import Admin
 from flask_admin import BaseView
 from flask_bootstrap import Bootstrap
@@ -35,6 +37,16 @@ app.register_blueprint(mgr_log)
 @app.route('/')
 def jump_home(page_name=''):
     return redirect('/home/',  code=301)
+
+
+@app.errorhandler(400)
+@app.errorhandler(404)
+@app.errorhandler(500)
+def error_handler(e):
+    return render_template('error.html', error='出错了，请联系管理员!')
+
+
+# app.register_error_handler(400, lambda e: '出错了，请联系管理员!')
 
 
 # print(list(app.url_map.iter_rules()))
