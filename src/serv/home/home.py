@@ -7,6 +7,6 @@ from flask import Blueprint, render_template
 from . import home
 
 
-@home.route('/test/<value>')
-def test(value):
-    return render_template('home.html')
+@home.route('/')
+def home_page(page_name=''):
+    return render_template('home.html', title='home {}'.format(page_name))

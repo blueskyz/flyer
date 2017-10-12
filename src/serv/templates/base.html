@@ -1,0 +1,44 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}ddqq 数据任务平台{% endblock %}
+
+<body>
+{% block navbar %}
+<nav class="navbar navbar-expand-md fixed-top">
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="/"><span style="color: yellow">ddqq 数据任务平台</span></a>
+        <button type="button"
+                class="navbar-toggle d-lg-none"
+                data-toggle="collapse"
+                data-target="#id-navbar-collapse"
+                aria-expanded="false"
+                aira-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="id-navbar-collapse">
+            <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+                <li class="nav-item"><a class="nav-link" href="/task">任务</a></li>
+                <li class="nav-item"><a class="nav-link" href="/schd">执行计划</a></li>
+                <li class="nav-item"><a class="nav-link" href="/user">用户管理</a></li>
+                <li class="nav-item"><a class="nav-link" href="/log">日志</a></li>
+            </ul>
+            <form class="pull-right form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% block page_content %}
+    {% endblock %}
+</div>
+{% endblock %}
+</body>
