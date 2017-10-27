@@ -1,0 +1,23 @@
+{
+  "name": "flyer",
+  "homepage": "https://github.com/blueskyz/flyer",
+  "authors": [
+    "zsz@hopez.org"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "datatables": "DataTables#^1.10.16",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
